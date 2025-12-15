@@ -30,14 +30,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BAND NAME — Official</title>
+  <title>CHAOS ERA</title>
   <meta name="description" content="Official site for BAND NAME — music, merch, and news.">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
 
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/a5b537959dee89cdce07d25ba/f6d05981671f68c3274b58322.js");</script>
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/a5b537959dee89cdce07d25ba/f6d05981671f68c3274b58322.js");
+
+    </script>
 
 </head>
+
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -89,8 +93,6 @@
     <!-- MUSIC -->
     <section id="music" class="container">
       <h2>Music</h2>
-      <p class="lead">Latest releases.</p>
-
       <div class="music-grid">
         <div class="track">
           <h3>Skinwalker</h3>
@@ -106,7 +108,7 @@
         <!-- Add more tracks as needed -->
       </div>
       <br>
-      <h2>Also  on:</h2>
+      <h2>Listen  On</h2>
             <div class="services-grid">
                 <div class="services">
                     <h3>Apple Music</h3>
@@ -130,15 +132,14 @@
                 
 
             </div>
-        </div>
     </section>
 
     <!-- MERCH -->
     <section id="merch" class="container">
       <h2>Merch</h2>
-      <p class="lead">Official merch — t-shirts, vinyl, stickers.</p>
+      <p class="lead">Embrace YOUR Chaos Era</p>
         <div class="product-grid">
-            <div id='product-component-1764057673833' class="track">
+            <div id='product-component-1764057673833' class="product-item">
                 <script type="text/javascript">
                 /*<![CDATA[*/
                 (function () {
@@ -181,7 +182,8 @@
                     },
                     "title": {
                         "font-family": "Lato, sans-serif",
-                        "color": "#ffffff"
+                        "color": "#ffffff",
+                        "min-height": "60px"
                     },
                     "button": {
                         "font-family": "Lato, sans-serif",
@@ -363,7 +365,7 @@
                 </script>
             </div>
 
-            <div id='product-component-1764058335642'>
+            <div id='product-component-1764058335642' class="product-item">
                 <script type="text/javascript">
                 /*<![CDATA[*/
                 (function () {
@@ -406,7 +408,8 @@
                     },
                     "title": {
                         "font-family": "Lato, sans-serif",
-                        "color": "#ffffff"
+                        "color": "#ffffff",
+                        "min-height": "60px"
                     },
                     "button": {
                         "font-family": "Lato, sans-serif",
@@ -587,7 +590,7 @@
                 /*]]>*/
                 </script>
             </div>
-            <div id='product-component-1764058651431'>
+            <div id='product-component-1764058651431' class="product-item">
                 <script type="text/javascript">
                 /*<![CDATA[*/
                 (function () {
@@ -630,7 +633,8 @@
                     },
                     "title": {
                         "font-family": "Lato, sans-serif",
-                        "color": "#ffffff"
+                        "color": "#ffffff",
+                        "min-height": "60px"
                     },
                     "button": {
                         "font-family": "Lato, sans-serif",
@@ -811,7 +815,7 @@
                 /*]]>*/
                 </script>
             </div>
-        </div>\
+        </div>
       
     </section>
   </main>
@@ -835,20 +839,17 @@
       mobileMenu.style.display = expanded ? 'none' : 'block';
     });
 
-    // Pause video on mobile (many mobile devices block autoplay or may prefer to save bandwidth)
-    const bgVideo = document.getElementById('bgVideo');
-    function shouldDisableVideo(){
-      // simple check: small screens -> don't autoplay large video
-      return window.matchMedia('(max-width:800px)').matches;
-    }
-    if(shouldDisableVideo()){
-      // show poster and stop attempting to play
-      try{ bgVideo.pause(); bgVideo.removeAttribute('autoplay'); }catch(e){}
-    }
+        // Mobile autoplay handling: leave control to browser; keep poster as fallback
+        const bgVideo = document.getElementById('bgVideo');
+        // Previously we paused video on small screens which hid the visual.
+        // Modern browsers will block autoplay if needed; keeping the element ensures
+        // poster/fallback is visible and users can tap to play on mobile.
 
 
     // If you have the Shopify snippet, you can call initShopifyBuyButton() after including their script.
   </script>
 
 </body>
+
+
 </html>
