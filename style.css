@@ -81,7 +81,7 @@ header {
   max-width: 80vw;
   overflow: hidden;
     margin-top: -50px;
-  margin-bottom: -160px;
+  margin: -50px auto -100px auto;
 }
 nav {
   display: flex;
